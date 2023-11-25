@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:secrete_friend_drawer/config/locator.dart';
 import 'package:secrete_friend_drawer/widgets/home/home_form_widget.dart';
 
 void main() {
   group('HomeFormWidget', () {
+    
+    setupLocators();
+
     testWidgets('Renders correctly', (WidgetTester tester) async {
       // Build our widget and trigger a frame.
       await tester.pumpWidget(
