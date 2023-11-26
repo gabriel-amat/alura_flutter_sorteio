@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
+import 'package:secrete_friend_drawer/config/locator.dart';
 import 'package:secrete_friend_drawer/main.dart';
 import 'package:secrete_friend_drawer/widgets/widgets.dart';
 
@@ -9,6 +10,9 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
   testWidgets('E2E - All app flow', (WidgetTester tester) async {
+    
+    setupLocators();
+
     // Scenario 1: Check initial state in HomeFormWidget
     await tester.pumpWidget(const MyApp());
     expect(find.byType(HomeFormWidget), findsOneWidget);
